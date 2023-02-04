@@ -2,6 +2,23 @@
  var xValues = [];
     var yValues = [];
 
+
+
+    var chart = new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                borderColor: "rgba(0,25,225,1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false }
+        }
+    });
+
+
         Load();
         getTemperature();
 
@@ -67,18 +84,3 @@
         chart.data.datasets[0].data = yValues;
         chart.update();
     }
-
-    var chart = new Chart("myChart", {
-        type: "line",
-        data: {
-            labels: xValues,
-            datasets: [{
-                borderColor: "rgba(0,25,225,1)",
-                data: yValues
-            }]
-        },
-        options: {
-            legend: { display: false }
-        }
-    });
-
