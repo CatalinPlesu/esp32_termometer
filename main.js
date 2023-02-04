@@ -30,18 +30,19 @@
     function getTemperature() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
-            var curent_temperature = -199;
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 200) {
-                        curent_temperature = this.responseText;
+                        var curent_temperature = this.responseText;
+                        addData(curent_temperature);
+                        document.getElementById("temperaturec").innerHTML = curent_temperature;
                     } else {
-                        curent_temperature = -199;
+                        var curent_temperature = -199;
+                        addData(curent_temperature);
+                        document.getElementById("temperaturec").innerHTML = curent_temperature;
                     }
                 }
             };
-            addData(curent_temperature);
-            document.getElementById("temperaturec").innerHTML = curent_temperature;
 
         };
         xhttp.open("GET", "/temperaturec", true);
