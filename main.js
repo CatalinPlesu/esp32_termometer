@@ -1,4 +1,4 @@
-document.onload = function(){   
+
  var xValues = [];
     var yValues = [];
 
@@ -81,4 +81,4 @@ document.onload = function(){
             legend: { display: false }
         }
     });
-}
+
