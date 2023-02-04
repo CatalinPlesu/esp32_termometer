@@ -37,9 +37,7 @@
                         addData(curent_temperature);
                         document.getElementById("temperaturec").innerHTML = curent_temperature;
                     } else {
-                        var curent_temperature = -199;
-                        addData(curent_temperature);
-                        document.getElementById("temperaturec").innerHTML = curent_temperature;
+                        alert('serverul este ofline!!!');
                     }
                 }
             };
